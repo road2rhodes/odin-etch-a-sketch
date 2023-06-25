@@ -12,10 +12,11 @@ function canvasSelector (inputNumber) {
 
     div = document.createElement('div')
     div.classList.add('pixel',`pixel-${i}`);
+    div.style =  `width: calc(100% / ${inputNumber});`;
 
     WRAPPER.appendChild(div);
   }
 
 }
 
-canvasSelector(256);
+canvasSelector(10);
