@@ -8,17 +8,24 @@ body {
 
 #wrap {
   display: flex;
-  flex-flow: row wrap;
-  width: 750px;
-  height: 750px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 768px;
+  height: 768px;
   border: 5px solid #f0aa2a;
 }
 
 .pixel {
-  background-color: #fff;
-  flex: auto;
-  width: 46px;
-  outline: black solid 1px;
+  /* background-color: #fff;
+  border: 1px solid black;
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  flex-grow: 1;
+  aspect-ratio: 1/1; */
+  flex: 1 1 10%;
+  background-color: #ffffff;
+  border: 1px solid black;
 }
 
  /* | Utilities */
