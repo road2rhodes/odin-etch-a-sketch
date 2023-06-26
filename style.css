@@ -1,5 +1,9 @@
 *, ::before, ::after {margin: 0; padding: 0; box-sizing: border-box;}
 
+:root {
+  --grid-lines:
+}
+
 /* | Blocks */
 
 body {
@@ -14,8 +18,6 @@ body {
 }
 
 .pixel {
-  background-color: #fff;
-  border: 1px solid black;
   background-color: #ffffff;
   border: 1px solid black;
 }
