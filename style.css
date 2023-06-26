@@ -56,8 +56,12 @@ h1 > span {
   gap: 1em;
 }
 .controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 300px;
   height: var(--etch--screen-size);
+  padding: 10px;
   border: 1px solid rgb(216, 27, 27);
   box-shadow: 0px 0px 15px rgb(143, 25, 25);
   background-color: #ffa4a7;
@@ -67,3 +71,7 @@ h1 > span {
  /* | Utilities */
 
  /* | Modifiers */
+
+ .controls > form > input {
+  width: 100%;
+ }
