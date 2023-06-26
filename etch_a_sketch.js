@@ -25,9 +25,15 @@ function activatePixel() {
   this.style.backgroundColor="var(--black)"
 }
 
+function deActivatePixel() {
+  PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
+}
+
 canvasSelector(32);
 
 // Post Canvas Creation
 
 const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
 PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
+
+resetBtn.addEventListener("click", deActivatePixel); 
