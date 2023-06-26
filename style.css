@@ -19,6 +19,7 @@ body {
   display: grid;
   width: var(--etch--screen-size);
   height: var(--etch--screen-size);
+  margin: 3rem auto;
   border: 5px solid var(--etch-border-color);
 }
 
