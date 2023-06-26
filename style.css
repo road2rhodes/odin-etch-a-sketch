@@ -1,12 +1,13 @@
 *, ::before, ::after {margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
-  --grid-lines: rgb(224, 224, 224);
+  --grid-lines: rgb(240, 240, 240);
   --etch-bgcolor: #d10f17;
   --etch-border-color: #f0aa2a;
   --etch--screen-size: 700px;
+  --etch-screen-color: #eceaea;
   --white-color: #ffffff;
-  --black: #313131;
+  --black: #202020;
 }
 
 /* | Blocks */
@@ -17,7 +18,6 @@ body {
 }
 
 h1 {
-  margin: 1.5rem 0;
   text-align: center;
   text-transform: uppercase;
   color: var(--etch-border-color);
@@ -32,7 +32,10 @@ h1 > span {
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  row-gap: 1.5em;
 }
 
 #sketchpad {
@@ -44,7 +47,7 @@ h1 > span {
 }
 
 .pixel {
-  background-color: var(--white-color);
+  background-color: var(--etch-screen-color);
   border: 1px solid var(--grid-lines);
 }
 .sketch-and-controls {
