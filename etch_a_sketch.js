@@ -1,6 +1,6 @@
 // Defintions
 
-const WRAPPER = document.getElementById('wrap'); 
+const WRAPPER = document.getElementById('sketchpad'); 
 
 // Functions
 
