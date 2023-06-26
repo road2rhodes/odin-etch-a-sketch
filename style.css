@@ -20,13 +20,24 @@ body {
   display: grid;
   width: var(--etch--screen-size);
   height: var(--etch--screen-size);
-  margin: 3rem auto;
+  margin: 0 auto;
   border: 5px solid var(--etch-border-color);
 }
 
 .pixel {
   background-color: var(--white-color);
   border: 1px solid var(--grid-lines);
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+h1 > span {
+  text-transform: uppercase;
+  color: var(--etch-border-color);
+  -webkit-text-stroke: 1px rgb(228, 112, 112);
 }
 
  /* | Utilities */
