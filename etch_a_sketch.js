@@ -21,8 +21,8 @@ function canvasSelector (inputNumber) {
 
 }
 
-function activatePixel(pixel) {
-  pixel.style.backgroundColor = "--black";
+function activatePixel() {
+  this.style.backgroundColor="var(--black)"
 }
 
 canvasSelector(32);
@@ -30,4 +30,4 @@ canvasSelector(32);
 // Post Canvas Creation
 
 const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
-PIXELS.forEach(pixel => pixel.addEventListener("mouseover", () => pixel.style.backgroundColor="var(--black)")); 
+PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
