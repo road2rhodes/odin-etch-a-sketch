@@ -19,8 +19,15 @@ function canvasSelector (inputNumber) {
   WRAPPER.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
   grid-template-rows: repeat(${inputNumber}, 1fr)`;
 
-
-
 }
 
-canvasSelector(100);
+function activatePixel(pixel) {
+  pixel.style.backgroundColor = "--black";
+}
+
+canvasSelector(32);
+
+// Post Canvas Creation
+
+const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
+PIXELS.forEach(pixel => pixel.addEventListener("mouseover", () => pixel.style.backgroundColor="var(--black)")); 
