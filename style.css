@@ -1,7 +1,7 @@
 *, ::before, ::after {margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
-  --grid-lines: rgb(199, 199, 199);
+  --grid-lines: rgb(224, 224, 224);
   --etch-bgcolor: #d10f17;
   --etch-border-color: #f0aa2a;
   --etch--screen-size: 700px;
