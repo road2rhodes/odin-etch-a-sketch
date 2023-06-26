@@ -8,7 +8,7 @@ body {
 
 #wrap {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   width: 768px;
   height: 768px;
@@ -16,14 +16,11 @@ body {
 }
 
 .pixel {
-  /* background-color: #fff;
+  background-color: #fff;
   border: 1px solid black;
-  width: 100%;
-  max-width: 100px;
   max-height: 100px;
   flex-grow: 1;
-  aspect-ratio: 1/1; */
-  flex: 1 1 10%;
+  flex: 1 1 100px;
   background-color: #ffffff;
   border: 1px solid black;
 }
