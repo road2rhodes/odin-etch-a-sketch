@@ -8,15 +8,19 @@ const WRAPPER = document.getElementById('wrap');
 
 function canvasSelector (inputNumber) {
 
+  
+
   for (i = 1; i <= inputNumber; i++) {
 
     div = document.createElement('div')
-    div.classList.add('pixel',`pixel-${i}`);
-    div.style =  `width: calc(100% / ${inputNumber});`;
-
+    div.classList.add('pixel-row',`pixel-${i}`);
     WRAPPER.appendChild(div);
+    
   }
+
+  WRAPPER.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr)`;
+
 
 }
 
-canvasSelector(10);
+canvasSelector(9);
