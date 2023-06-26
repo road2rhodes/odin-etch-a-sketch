@@ -30,14 +30,15 @@ body {
 }
 
 h1 {
+  margin: 1.5rem 0;
   text-align: center;
-  margin: 1rem 0;
-}
-
-h1 > span {
   text-transform: uppercase;
   color: var(--etch-border-color);
   -webkit-text-stroke: 1px rgb(228, 112, 112);
+}
+
+h1 > span {
+  
 }
 
  /* | Utilities */
