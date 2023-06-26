@@ -16,6 +16,24 @@ body {
   color: var(--white-color)
 }
 
+h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--etch-border-color);
+  -webkit-text-stroke: 1px rgb(228, 112, 112);
+}
+
+h1 > span {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 #sketchpad {
   display: grid;
   width: var(--etch--screen-size);
@@ -29,17 +47,7 @@ body {
   border: 1px solid var(--grid-lines);
 }
 
-h1 {
-  margin: 1.5rem 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--etch-border-color);
-  -webkit-text-stroke: 1px rgb(228, 112, 112);
-}
 
-h1 > span {
-  
-}
 
  /* | Utilities */
 
