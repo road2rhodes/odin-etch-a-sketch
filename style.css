@@ -48,6 +48,8 @@ h1 > span {
 }
 .sketch-and-controls {
   display: flex;
+  justify-content: space-between;
+  gap: 1em;
 }
 .controls {
   width: 300px;
