@@ -40,6 +40,7 @@ h1 > span {
   width: var(--etch--screen-size);
   height: var(--etch--screen-size);
   border: 5px solid var(--etch-border-color);
+  box-shadow: 0px 0px 15px rgb(143, 25, 25);
 }
 
 .pixel {
