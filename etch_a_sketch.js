@@ -29,7 +29,8 @@ function deActivatePixel() {
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
 }
 
-canvasSelector(32);
+canvasSelector(sliderValue.value);
+sliderValue.addEventListener("change", canvasSelector);
 
 // Post Canvas Creation
 
