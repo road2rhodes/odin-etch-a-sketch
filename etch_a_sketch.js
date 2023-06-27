@@ -6,7 +6,7 @@ const WRAPPER = document.getElementById('sketchpad');
 
 ///// Must replace existing squares with the specified
 
-function canvasSelector (inputNumber) {
+function canvasSetup (inputNumber) {
 
   for (i = 1; i <= inputNumber**2; i++) {
 
@@ -29,8 +29,8 @@ function deActivatePixel() {
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
 }
 
-canvasSelector(sliderValue.value);
-sliderValue.addEventListener("change", canvasSelector);
+canvasSetup(sliderValue.value);
+sliderValue.addEventListener("change", canvasSetup);
 
 // Post Canvas Creation
 
