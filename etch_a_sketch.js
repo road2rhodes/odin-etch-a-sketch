@@ -1,10 +1,13 @@
-// Defintions
 
-const WRAPPER = document.getElementById('sketchpad'); 
+/// Definitions
+// sketchpad is container div for all generated pixels
+// sliderValue refers to the input slider
+// resetBtn refers to the reset button
 
-// Functions
+// Draw canvas
 
-///// Must replace existing squares with the specified
+canvasSetup(sliderValue.value);
+sliderValue.addEventListener("change", canvasSetup);
 
 function canvasSetup (inputNumber) {
 
@@ -12,19 +15,16 @@ function canvasSetup (inputNumber) {
 
     div = document.createElement('div');
     div.classList.add('pixel',`pixel-${i}`);
-    WRAPPER.appendChild(div);
+    sketchpad.appendChild(div);
     
   }
 
-  WRAPPER.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
+  // Creates grid with pixels generated
+
+  sketchpad.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
   grid-template-rows: repeat(${inputNumber}, 1fr)`;
 
 }
-
-// Draw canvas
-
-canvasSetup(sliderValue.value);
-sliderValue.addEventListener("change", canvasSetup);
 
 const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
 PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
