@@ -21,20 +21,25 @@ function canvasSetup (inputNumber) {
 
 }
 
+// Draw canvas
+
+canvasSetup(sliderValue.value);
+sliderValue.addEventListener("change", canvasSetup);
+
+const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
+PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
+
 function activatePixel() {
   this.style.backgroundColor="var(--black)"
 }
+
+// Function to reset canvas
+
+resetBtn.addEventListener("click", deActivatePixel); 
 
 function deActivatePixel() {
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
 }
 
-canvasSetup(sliderValue.value);
-sliderValue.addEventListener("change", canvasSetup);
 
-// Post Canvas Creation
 
-const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
-PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
-
-resetBtn.addEventListener("click", deActivatePixel); 
