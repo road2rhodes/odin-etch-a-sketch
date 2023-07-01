@@ -45,6 +45,16 @@ function changeCanvas() {
     
   }
 
+  inputNumber = sliderValue.value;
+
+  for (i = 1; i <= inputNumber**2; i++) {
+
+    div = document.createElement('div');
+    div.classList.add('pixel',`pixel-${i}`);
+    sketchpad.appendChild(div);
+    
+  }
+
 }
 
 // When input number changes, remove existing grid and then add grid
