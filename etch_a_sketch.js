@@ -21,12 +21,12 @@ function canvasDivMaker (inputNumber) { // Creates the divs
 const canvasGridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
 
 
-let sliderValueInput = sliderValue.value;
+let sliderNumberValue = sliderValue.value;
 
-canvasDivMaker(sliderValueInput);
+canvasDivMaker(sliderNumberValue);
 sliderValue.addEventListener("change", canvasDivMaker());
 
-canvasGridMaker(sliderValueInput); // Gives grid styling to wrapper
+canvasGridMaker(sliderNumberValue); // Gives grid styling to wrapper
 
 // Capture grids and add event listener
 
@@ -41,7 +41,7 @@ function activatePixel() {
 
 divsCreated = sketchpad.children.length; // gets current number of divs
 
-function changeCanvas() {
+function changeCanvas(sliderNumberValue) {
 
   for (i = 0; i < divsCreated; i++) {
 
@@ -49,18 +49,8 @@ function changeCanvas() {
     
   }
 
-  inputNumber = 15;
-
-  for (i = 1; i <= inputNumber**2; i++) {
-
-    div = document.createElement('div');
-    div.classList.add('pixel',`pixel-${i}`);
-    sketchpad.appendChild(div);
-    
-  }
-
-  sketchpad.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
-  grid-template-rows: repeat(${inputNumber}, 1fr)`;
+  canvasDivMaker(sliderNumberValue);
+  canvasGridMaker(sliderNumberValue);
 
   PIXELS = document.querySelectorAll('.pixel');
 
