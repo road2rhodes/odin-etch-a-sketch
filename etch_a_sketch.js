@@ -6,18 +6,12 @@
 
 // Draw canvas
 
-// gridMaker initialized first since canvasSetup calls on it.
-
-sliderValueInput = sliderValue.value;
+let sliderValueInput = sliderValue.value;
 
 const gridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
 
-canvasSetup(sliderValueInput);
-sliderValue.addEventListener("change", canvasSetup());
 
-
-
-function canvasSetup (inputNumber) {
+function canvasSetup (inputNumber) { // Creates the divs
 
   for (i = 1; i <= inputNumber**2; i++) {
 
@@ -27,11 +21,14 @@ function canvasSetup (inputNumber) {
     
   }
 
-  // Creates grid with pixels generated
-
 }
 
-gridMaker(sliderValueInput);
+canvasSetup(sliderValueInput);
+sliderValue.addEventListener("change", canvasSetup());
+
+gridMaker(sliderValueInput); // Gives grid styling to wrapper
+
+// Capture grids and add event listener
 
 let PIXELS = document.querySelectorAll('.pixel');
 PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
