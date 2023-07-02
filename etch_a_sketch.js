@@ -26,6 +26,8 @@ function canvasDivMaker (inputNumber) { // Creates the divs
 
 const canvasGridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
 
+let pixels;
+
 let slider = document.querySelector('#sliderValue');
 
 canvasDivMaker(slider.value);
@@ -62,6 +64,7 @@ function changeCanvas() {
 resetBtn.addEventListener("click", deActivatePixel); 
 
 function deActivatePixel() {
+  let PIXELS = document.querySelectorAll('.pixel'); 
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
 }
 
