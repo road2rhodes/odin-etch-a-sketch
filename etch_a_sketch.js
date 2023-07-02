@@ -72,3 +72,5 @@ function deActivatePixel() {
 // Button Functionality
 
 sliderValue.addEventListener('change',() => {canvasGridMaker(slider.value); canvasDivMaker(slider.value);});
+
+rgbModeBtn.addEventListener('click',() => pixelColor = `rgb(${Math.floor(Math.random() * (255 - 0 + 1) + 0)}, ${Math.floor(Math.random() * (255 - 0 + 1) + 0)}, ${Math.floor(Math.random() * (255 - 0 + 1) + 0)})`);
