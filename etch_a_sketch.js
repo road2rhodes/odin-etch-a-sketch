@@ -6,8 +6,16 @@
 
 // Draw canvas
 
-canvasSetup(sliderValue.value);
-sliderValue.addEventListener("change", canvasSetup);
+// gridMaker initialized first since canvasSetup calls on it.
+
+sliderValueInput = sliderValue.value;
+
+const gridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
+
+canvasSetup(sliderValueInput);
+sliderValue.addEventListener("change", canvasSetup());
+
+
 
 function canvasSetup (inputNumber) {
 
@@ -21,12 +29,11 @@ function canvasSetup (inputNumber) {
 
   // Creates grid with pixels generated
 
-  sketchpad.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
-  grid-template-rows: repeat(${inputNumber}, 1fr)`;
-
 }
 
-const PIXELS = document.querySelectorAll('.pixel'); console.log(PIXELS);
+gridMaker(sliderValueInput);
+
+let PIXELS = document.querySelectorAll('.pixel');
 PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
 
 function activatePixel() {
@@ -45,7 +52,7 @@ function changeCanvas() {
     
   }
 
-  inputNumber = sliderValue.value;
+  inputNumber = 15;
 
   for (i = 1; i <= inputNumber**2; i++) {
 
@@ -54,6 +61,11 @@ function changeCanvas() {
     sketchpad.appendChild(div);
     
   }
+
+  sketchpad.style.cssText=`grid-template-columns: repeat(${inputNumber}, 1fr);
+  grid-template-rows: repeat(${inputNumber}, 1fr)`;
+
+  PIXELS = document.querySelectorAll('.pixel');
 
 }
 
