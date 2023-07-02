@@ -39,7 +39,7 @@ function activatePixel() {
 
 divsCreated = sketchpad.children.length; // gets current number of divs
 
-function changeCanvas(inputNumber) {
+function changeCanvas() {
 
 
   for (i = 0; i < divsCreated; i++) {
@@ -47,9 +47,6 @@ function changeCanvas(inputNumber) {
     sketchpad.firstElementChild.remove();
     
   }
-
-  canvasDivMaker(inputNumber);
-  canvasGridMaker(inputNumber);
 
 }
 
@@ -65,4 +62,4 @@ function deActivatePixel() {
 
 // Button Functionality
 
-sliderValue.addEventListener('change',() => {changeCanvas(slider.value); canvasDivMaker(slider.value), canvasGridMaker(slider.value)});
+sliderValue.addEventListener('change',() => {canvasGridMaker(slider.value); canvasDivMaker(slider.value); changeCanvas(slider.value)});
