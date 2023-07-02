@@ -67,6 +67,7 @@ resetBtn.addEventListener("click", deActivatePixel);
 function deActivatePixel() {
   let PIXELS = document.querySelectorAll('.pixel'); 
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
+  pixelColor = "var(--black)";
 }
 
 // Button Functionality
@@ -74,3 +75,5 @@ function deActivatePixel() {
 sliderValue.addEventListener('change',() => {canvasGridMaker(slider.value); canvasDivMaker(slider.value);});
 
 rgbModeBtn.addEventListener('click',() => pixelColor = `rgb(${Math.floor(Math.random() * (255 - 0 + 1) + 0)}, ${Math.floor(Math.random() * (255 - 0 + 1) + 0)}, ${Math.floor(Math.random() * (255 - 0 + 1) + 0)})`);
+
+resetBtn.addEventListener("click", deActivatePixel); 
