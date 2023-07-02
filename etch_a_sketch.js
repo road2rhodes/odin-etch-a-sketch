@@ -34,12 +34,14 @@ canvasDivMaker(slider.value);
 
 canvasGridMaker(slider.value); // Gives grid styling to wrapper
 
-// Capture grids and add event listener
+// Activate pixels
 
-
+let pixelColor;
 
 function activatePixel() {
-  this.style.backgroundColor="var(--black)"
+
+  pixelColor = "var(--black)";
+  this.style.backgroundColor= pixelColor;
 }
 
 // Change canvas based on input
