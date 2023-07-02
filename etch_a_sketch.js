@@ -6,7 +6,6 @@
 
 // Draw canvas
 
-let sliderValueInput = sliderValue.value;
 
 const gridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
 
@@ -22,6 +21,8 @@ function canvasSetup (inputNumber) { // Creates the divs
   }
 
 }
+
+let sliderValueInput = sliderValue.value;
 
 canvasSetup(sliderValueInput);
 sliderValue.addEventListener("change", canvasSetup());
