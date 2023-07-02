@@ -24,7 +24,6 @@ const canvasGridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: 
 let sliderNumberValue = sliderValue.value;
 
 canvasDivMaker(sliderNumberValue);
-sliderValue.addEventListener("change", canvasDivMaker());
 
 canvasGridMaker(sliderNumberValue); // Gives grid styling to wrapper
 
@@ -49,8 +48,7 @@ function changeCanvas(sliderNumberValue) {
     
   }
 
-  canvasDivMaker(sliderNumberValue);
-  canvasGridMaker(sliderNumberValue);
+  
 
   PIXELS = document.querySelectorAll('.pixel');
 
@@ -66,4 +64,6 @@ function deActivatePixel() {
   PIXELS.forEach( pixel => pixel.style.backgroundColor="var(--etch-screen-color)");
 }
 
-console.log(divsCreated);
+// Button Functionality
+
+sliderValue.addEventListener('change',() => {changeCanvas(sliderNumberValue); canvasDivMaker(sliderNumberValue), canvasGridMaker(sliderNumberValue)});
