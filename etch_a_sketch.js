@@ -6,11 +6,7 @@
 
 // Draw canvas
 
-
-const gridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
-
-
-function canvasSetup (inputNumber) { // Creates the divs
+function canvasDivMaker (inputNumber) { // Creates the divs
 
   for (i = 1; i <= inputNumber**2; i++) {
 
@@ -22,12 +18,15 @@ function canvasSetup (inputNumber) { // Creates the divs
 
 }
 
+const canvasGridMaker = (n) => {sketchpad.style.cssText=`grid-template-columns: repeat(${n}, 1fr); grid-template-rows: repeat(${n}, 1fr)`}; 
+
+
 let sliderValueInput = sliderValue.value;
 
-canvasSetup(sliderValueInput);
-sliderValue.addEventListener("change", canvasSetup());
+canvasDivMaker(sliderValueInput);
+sliderValue.addEventListener("change", canvasDivMaker());
 
-gridMaker(sliderValueInput); // Gives grid styling to wrapper
+canvasGridMaker(sliderValueInput); // Gives grid styling to wrapper
 
 // Capture grids and add event listener
 
