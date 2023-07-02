@@ -36,11 +36,10 @@ canvasGridMaker(slider.value); // Gives grid styling to wrapper
 
 // Activate pixels
 
-let pixelColor;
+pixelColor = "var(--black)";
 
 function activatePixel() {
 
-  pixelColor = "var(--black)";
   this.style.backgroundColor= pixelColor;
 }
 
