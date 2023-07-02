@@ -8,6 +8,8 @@
 
 function canvasDivMaker (inputNumber) { // Creates the divs
 
+  sketchpad.innerHTML = ""; // clears canvas before regenerating.
+
   for (i = 1; i <= inputNumber**2; i++) {
 
     div = document.createElement('div');
@@ -15,6 +17,10 @@ function canvasDivMaker (inputNumber) { // Creates the divs
     sketchpad.appendChild(div);
     
   }
+
+  // Part of function call to regenerate with new pixels
+  let PIXELS = document.querySelectorAll('.pixel'); 
+  PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
 
 }
 
@@ -28,8 +34,7 @@ canvasGridMaker(slider.value); // Gives grid styling to wrapper
 
 // Capture grids and add event listener
 
-let PIXELS = document.querySelectorAll('.pixel');
-PIXELS.forEach(pixel => pixel.addEventListener("mouseover", activatePixel)); 
+
 
 function activatePixel() {
   this.style.backgroundColor="var(--black)"
@@ -62,4 +67,4 @@ function deActivatePixel() {
 
 // Button Functionality
 
-sliderValue.addEventListener('change',() => {canvasGridMaker(slider.value); canvasDivMaker(slider.value); changeCanvas(slider.value)});
+sliderValue.addEventListener('change',() => {canvasGridMaker(slider.value); canvasDivMaker(slider.value);});
